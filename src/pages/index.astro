@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
+import Skills from "../components/Skills.astro";
 ---
 
 <Layout title="Accueil">
@@ -44,6 +45,53 @@ import Nav from "../components/Nav.astro";
       > et je suis prêt à <strong>développer de nouvelles compétences</strong> afin
       de continuer à <strong> progresser dans mon métier</strong>.
     </p>
+    <h1 class="title-skills">
+      👨‍💻 <span class="text-gradient">Compétences</span>
+    </h1>
+    <div class="skills">
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg"
+        title="Angular"
+        alt="angular logo"
+      />
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+        title="Javascript"
+        alt="javascript logo"
+      />
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
+        title="HTML"
+        alt="html logo"
+      />
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"
+        title="CSS"
+        alt="css logo"
+      />
+    </div>
+    <div class="skills">
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
+        title="Typescript"
+        alt="typescript logo"
+      />
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg"
+        title="Symfony"
+        alt="symfony logo"
+      />
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+        title="MySQL"
+        alt="mysql logo"
+      />
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg"
+        title="PHP"
+        alt="php logo"
+      />
+    </div>
   </main>
 </Layout>
 
@@ -71,6 +119,12 @@ import Nav from "../components/Nav.astro";
 
   h2 {
     color: #31733c;
+    font-weight: 400;
+  }
+
+  .title-skills {
+    text-align: center;
+    margin-top: 40px;
   }
 
   .job {
@@ -111,6 +165,7 @@ import Nav from "../components/Nav.astro";
     padding: 1rem;
     border-radius: 0.4rem;
     font-weight: 400;
+    text-align: justify;
   }
   .instructions strong {
     color: rgb(var(--accent-gradient));
@@ -120,5 +175,16 @@ import Nav from "../components/Nav.astro";
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 1rem;
     padding: 0;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 130px;
+    width: 100%;
+    margin: auto;
+    margin-top: 60px;
   }
 </style>

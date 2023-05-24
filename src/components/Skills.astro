@@ -1,0 +1,39 @@
+---
+export interface Props {
+  src: string;
+  alt: string;
+  title: string;
+}
+
+const { src, alt, title } = Astro.props;
+---
+
+<div class="skill">
+  <img class="img-skill" src={src} alt={alt} />
+  <p class="title-skill">{title}</p>
+</div>
+
+<style>
+  :root {
+    --accent: 49, 115, 60;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #65d776 50%);
+  }
+  .img-skill {
+    width: 100px;
+  }
+
+  .skill {
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    width: 110px;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #31733c;
+    font-weight: 600;
+    font-size: 17px;
+  }
+</style>
