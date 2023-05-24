@@ -1,0 +1,59 @@
+---
+export interface Props {
+  home: string;
+  portfolio: string;
+  contact: string;
+  src: string;
+  alt: string;
+  hrefHome: string;
+  hrefPortfolio: string;
+  hrefContact: string;
+}
+
+const {
+  src,
+  alt,
+  hrefHome,
+  hrefContact,
+  hrefPortfolio,
+  home,
+  portfolio,
+  contact,
+} = Astro.props;
+---
+
+<nav>
+  <div class="logo">
+    <img src={src} alt={alt} />
+  </div>
+
+  <div class="links">
+    <a class="link" href={hrefHome}>{home}</a>
+    <a class="link" href={hrefPortfolio}>{portfolio}</a>
+    <a class="link" href={hrefContact}>{contact}</a>
+  </div>
+</nav>
+<style>
+  nav {
+    width: 80%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .link {
+    color: #33733c;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .links {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+</style>
