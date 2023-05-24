@@ -16,16 +16,42 @@ import Nav from "../components/Nav.astro";
     contact="Contact"
   />
   <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
+    <div class="introduction">
+      <div class="intro-text">
+        <h2>👋 Salut, moi c'est</h2>
+        <h1><span class="text-gradient">Sébastien</span></h1>
+        <p class="job">Concepteur d'applications</p>
+      </div>
+      <img
+        class="profile"
+        src="../public/assets/profile.png"
+        alt="photo sébastien"
       />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+    </div>
+    <p class="instructions">
+      Je suis <strong>développeur web junior</strong> spécialisé dans la <strong
+        >conception d'applications web</strong
+      >. J'ai travaillé sur de nombreux projets qui m'ont permis de <strong
+        >développer mes compétences</strong
+      > en matière de <strong>développement web</strong>. <br /><br /> Grâce à ces
+      <strong>connaissances</strong>, je suis capable de <strong
+        >créer des applications web professionnelles et modernes</strong
+      >. J'aime <strong>travailler en équipe</strong> et <strong
+        >collaborer</strong
+      > sur des <strong>projets passionants</strong>. <br />
+      <br /> Je suis toujours à l'affût de <strong
+        >nouvelles technologies</strong
+      > et je suis prêt à <strong>développer de nouvelles compétences</strong> afin
+      de continuer à <strong> progresser dans mon métier</strong>.
     </p>
   </main>
 </Layout>
 
 <style>
+  :root {
+    --accent: 49, 115, 60;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #65d776 50%);
+  }
   body {
     padding: 0;
     margin: 0;
@@ -35,12 +61,38 @@ import Nav from "../components/Nav.astro";
   main {
     margin: auto;
     padding: 1.5rem;
-    max-width: 60ch;
+    max-width: 70%;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 800;
     margin: 0;
+  }
+
+  h2 {
+    color: #31733c;
+  }
+
+  .job {
+    background-color: #31733c;
+    width: 300px;
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+  .introduction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .profile {
+    width: 300px;
   }
   .text-gradient {
     background-image: var(--accent-gradient);
@@ -54,19 +106,14 @@ import Nav from "../components/Nav.astro";
     margin: 1rem 0;
     border: 1px solid rgba(var(--accent), 25%);
     background-color: white;
+    color: #31733c;
+    font-size: 20px;
     padding: 1rem;
     border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
+    font-weight: 400;
   }
   .instructions strong {
-    color: rgb(var(--accent));
+    color: rgb(var(--accent-gradient));
   }
   .link-card-grid {
     display: grid;
