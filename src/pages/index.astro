@@ -92,6 +92,30 @@ import Skills from "../components/Skills.astro";
         alt="php logo"
       />
     </div>
+    <hr class="line" />
+    <div class="skills">
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        title="Git"
+        alt="git logo"
+      />
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        title="GitHub"
+        alt="github logo"
+      />
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+        title="GitLab"
+        alt="gitlab logo"
+      />
+      <Skills
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+        title="Figma"
+        alt="figma logo"
+      />
+    </div>
+    <hr class="line" />
   </main>
 </Layout>
 
@@ -186,5 +210,13 @@ import Skills from "../components/Skills.astro";
     width: 100%;
     margin: auto;
     margin-top: 60px;
+  }
+
+  .line {
+    background-color: #31733c;
+    height: 2px;
+    border: none;
+    width: 50%;
+    margin-top: 50px;
   }
 </style>
