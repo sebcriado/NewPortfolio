@@ -9,11 +9,9 @@ import Skills from "../components/Skills.astro";
   <Nav
     alt=""
     src="../public/assets/logo.png"
-    hrefPortfolio=""
     hrefContact=""
     hrefHome=""
     home="Accueil"
-    portfolio="Portfolio"
     contact="Contact"
   />
   <main>
@@ -116,6 +114,49 @@ import Skills from "../components/Skills.astro";
       />
     </div>
     <hr class="line" />
+    <div class="skills">
+      <Skills
+        src="../public/assets/gear.png"
+        title="Méthode Agile"
+        alt="logo gear"
+      />
+      <Skills
+        src="../public/assets/glass.png"
+        title="Veille technologique"
+        alt="logo glass"
+      />
+      <Skills
+        src="../public/assets/team.png"
+        title="Travail en équipe"
+        alt="logo team"
+      />
+    </div>
+    <h1 class="title-skills">
+      🔨 <span class="text-gradient">Projets</span>
+    </h1>
+    <div class="projects">
+      <Card
+        src="../public/assets/burger.png"
+        title="Can I Get Some Burger"
+        body="Site d'un restaurant réalisé pour la fin de ma formation. Il possède une interface administrateur et utilisateur.Les technologies utilisés sont: HTML, CSS, Javascript, PHP, SQL"
+        href="https://github.com/sebcriado/canIGetSomeBurger"
+        alt="projet 1"
+      />
+      <Card
+        src="../public/assets/blog.png"
+        title="Blog"
+        body="Blog réalisé pendant ma formation, on peux ajouter des commentaires sous les articles.Les technologies utilisés sont: HTML, CSS, Javascript, PHP, SQL"
+        href="https://github.com/sebcriado/Blog"
+        alt="projet 2"
+      />
+      <Card
+        src="../public/assets/news.png"
+        title="Formulaire newsletter"
+        body="Formulaire d'inscription à une newsletter.Les technologies utilisés sont: HTML, CSS, Javascript, PHP, SQL"
+        href="https://github.com/sebcriado/Newsletter-Form"
+        alt="projet 3"
+      />
+    </div>
   </main>
 </Layout>
 
@@ -210,6 +251,14 @@ import Skills from "../components/Skills.astro";
     width: 100%;
     margin: auto;
     margin-top: 60px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
   }
 
   .line {
